@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app='assignApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">Test Assignment</h1>
+        <p class="lead">Enter two numbers and click Result button</p>
+        <hr class="my-2">
+        <p>More info</p>
+
+
+    </div>
+    <div class="container" ng-controller="appCtrl">
+
+
+        <div class="row">
+            <form name="multiForm" novalidate>
+
+
+                <table class="table">
+                    <thead>
+
+                        <th scope="row">Multiplication</th>
+
+
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td scope="row">
+                                <td scope="column">
+                                    <label for="first_number"></label>
+                                    <input type="number" class="form-control" name="firstNumber" ng-model="firstNumber" required aria-describedby="firstNumber" 
+                                        placeholder="enter first number" value=43>
+
+                                </td>
+                                <td scope="column">
+                                    <img src="images/multiply.jpg" alt="" srcset="">
+                                </td>
+
+                            </td>
+
+                            <td scope="row">
+
+                                <label for="second_number"></label>
+                                <input type="number" class="form-control" name="secondNumber" ng-model="secondNumber" required aria-describedby="secondNumber" placeholder="enter second number" 
+                                    required>
+                                <small id="secondNumber" class="form-text text-muted">Second Number</small>
+                            </td>
+                            <td scope="row">
+                                <td scope="column">
+                                    <multiply-two-numbers multiply="multiplyNumbers(firstNumber,secondNumber)" data="firstNumner">Result:</multiply-two-numbers>
+                                </td>
+                                <td scope="column">
+
+
+                                    <!-- <input type="text" class="form-control" name="Result" id="Result" aria-describedby="secondNumber" placeholder="Result">
+                                <small id="Result" class="form-text text-muted">Result</small> -->
+
+
+                                    <h1>result</h1>
+                                    <img src="images/result.jpg" alt="result"> {{result}}
+                                </td>
+
+                            </td>
+                        </tr>
+                        <th>First Number</th>
+                        <th>Second Number</th>
+                        <th>Result</th>
+                        <tr ng-repeat="data in datas">
+                            <td scope="row">{{data.first_number}}</td>
+                            <td scope="row">{{data.second_number}}</td>
+                            <td scope="row">{{data.result}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </form>
+
+
+
+        </div>
+
+
+    </div>
+
+    <!--include controller-->
+    <script src="controllers/controller.js"></script>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

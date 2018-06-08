@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////
+--------------------------configuring the project folder-----------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////
+-------------------------------------------------------------------------------------------
+
+1:create a package with npm init command and follow along giving all the details
+    install express package and save it to package.json file
+    create a file server.js
+2:create a public folder and and index.html file
+3:write basic codes to test the server using express
+4:create a controller folder and include it in the index file
+5:write tags to get data from the controller
+
+
+
+-------------------------------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////
+--------------------------setting up to get data from mongodb------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////
+-------------------------------------------------------------------------------------------
+after installing ,
+6:create a rest endpoint /getData and put dummy data in the server.js file ,send and receive 
+7:require body-parser module to parse the body of the data in the response at server side.
