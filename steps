@@ -29,3 +29,4 @@ db    :mongoDB
 after installing ,
 6:create a rest endpoint /getData and put dummy data in the server.js file ,send and receive 
 7:require body-parser module to parse the body of the data in the response at server side.
+8:Jenkins server on aws http://18.212.196.155:8080/job/assignment/ws/
